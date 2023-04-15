@@ -11,7 +11,6 @@ RUN python -m pip install Django
 RUN mkdir /build
 ADD ./app.py /build/
 WORKDIR /build
-RUN PYTHONPATH=/build python app.py runserver
 
 ### Node Vars
 ENV APPUSER appuser
