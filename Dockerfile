@@ -1,4 +1,4 @@
-FROM python:3.11 as builder-djangoapp
+FROM python:3.11
 
 RUN apt-get update \
     && apt-get install -y wget \
@@ -21,7 +21,7 @@ ENV APP_PORT 8000
 # Install App
 RUN mkdir ${APP_BASEDIR}
 WORKDIR ${APP_BASEDIR}
-COPY --from=builder-djangoapp /build/server .
+COPY . /app
 
 # Change Owner
 RUN chown -R ${APPUSER}. ${APP_BASEDIR}
