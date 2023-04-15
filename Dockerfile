@@ -6,10 +6,12 @@ RUN apt-get update \
     && python get-pip.py \
     && rm get-pip.py
 
+RUN python -m pip install Django
+
 RUN mkdir /build
 ADD ./app.py /build/
 WORKDIR /build
-RUN PYTHONPATH=/build py app.py runserver
+RUN PYTHONPATH=/build python app.py runserver
 
 ### Node Vars
 ENV APPUSER appuser
