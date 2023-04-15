@@ -13,8 +13,6 @@ ADD ./app.py /build/
 WORKDIR /build
 
 ### Node Vars
-ENV APPUSER appuser
-ENV UIDGID 1001
 ENV APP_BASEDIR /app
 ENV APP_PORT 8000
 
@@ -22,12 +20,6 @@ ENV APP_PORT 8000
 RUN mkdir ${APP_BASEDIR}
 WORKDIR ${APP_BASEDIR}
 COPY . /app
-
-# Change Owner
-RUN chown -R ${APPUSER}. ${APP_BASEDIR}
-
-# Set User
-USER ${APPUSER}
 
 # ports
 EXPOSE ${APP_PORT}
