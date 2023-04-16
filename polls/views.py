@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Always for luck. Hello, world!! OpenShift - RedHat - Webhooks Test- GitOps.")
+    return HttpResponse("Always for luck. Hello, world!! OpenShift - RedHat - Webhooks Test 2 - GitOps.")
