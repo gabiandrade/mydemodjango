@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-51r=!g3xu%8av0atw#@(r87v&*gx)!ttx!&7%&%00-vxa&_fv=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mydemodjango-git-ga-tb-build-app.apps.eu410.prod.nextcle.com']
+ALLOWED_HOSTS = ['mydemodjango-git-ga-tb-build-app-2.apps.eu410.prod.nextcle.com']
 
 
 # Application definition
